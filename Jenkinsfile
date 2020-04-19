@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('----execute----'){
 			steps{
-				bat "mvn exec:java -Dexec.mainClass=\"course.maven.quick.App\" -s \"settings.xml\""
+				bat "java -jar *.jar"
 			}
 		}
     }
