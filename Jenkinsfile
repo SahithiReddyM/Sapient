@@ -17,5 +17,10 @@ pipeline {
 				bat "mvn package"
 			}
 		}
+		stage('----execute----'){
+			steps{
+				bat "mvn exec:java"
+			}
+		}
     }
 }
