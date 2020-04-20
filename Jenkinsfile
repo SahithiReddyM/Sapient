@@ -22,7 +22,7 @@ pipeline {
 			steps{
 				dir('target')
 				{
-					bat "java -jar *.jar"
+					bat "start java -jar *.jar"
 				}
 			}
 		
