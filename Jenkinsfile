@@ -1,5 +1,9 @@
 pipeline {
     agent any
+	tools { 
+        maven 'Maven 3.3.9' 
+        jdk 'jdk8'
+    }
     stages {
         stage ('----clean----') {
             steps {
@@ -22,7 +26,7 @@ pipeline {
 			steps{
 				dir('target')
 				{
-					bat "start java -jar *.jar"
+					bat "java -jar *.jar"
 				}
 			}
 		
