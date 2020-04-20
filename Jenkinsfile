@@ -18,9 +18,12 @@ pipeline {
 			}
 		}
 		stage('----execute----'){
+		      dir('target'){
 			steps{
-				bat "java -jar target\*.jar"
+				bat "java -jar *.jar"
 			}
 		}
+		}
+		
     }
 }
