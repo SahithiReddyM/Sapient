@@ -26,7 +26,7 @@ pipeline {
 			steps{
 				dir('target')
 				{
-					bat "java -jar *.jar"
+					bat "java -jar my-app-1.0-SNAPSHOT.jar"
 				}
 			}
 		
