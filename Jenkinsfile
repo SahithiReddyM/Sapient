@@ -20,7 +20,7 @@ pipeline {
 		stage('----execute----'){
 		      
 			steps{
-				dir 'target'
+				dir('target')
 				{
 					bat "java -jar *.jar"
 				}
