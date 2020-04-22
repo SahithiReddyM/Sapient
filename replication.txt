@@ -21,7 +21,7 @@ mongo_set:PRIMARY> mongo_node=(new Mongo('localhost:27017')).getDB('test')
 mongo_set:PRIMARY> mongo_node.mycollection.insert({"Message":"Done Writing"})
 mongo_set:PRIMARY> mongo_node.mycollection.find()
                    output:{ "_id" : ObjectId("5ea03fc53c16e73c171f468d"), "Message" : "Done Writing" }
-===================================
+================================================================================================
                **TERMINAL-2**
 sudo -i
 docker exec -it mongo_node1 mongo
@@ -34,7 +34,7 @@ mongo_set:SECONDARY> mongo_node1.mycollection.insert({"Message":"Writing message
 mongo_set:SECONDARY> mongo_node1.mycollection.find()
                      output:{ "_id" : ObjectId("5ea03fc53c16e73c171f468d"), "Message" : "Done Writing" }
   
-===================================
+=================================================================================================
                **TERMINAL-3**
 sudo -i
 docker exec -it mongo_node2 mongo
