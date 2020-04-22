@@ -38,9 +38,9 @@ mongo_set:SECONDARY> mongo_node1.mycollection.find()
                **TERMINAL-3**
 sudo -i
 docker exec -it mongo_node2 mongo
-mongo_set:SECONDARY> mongo_node1=(new Mongo('localhost:27017')).getDB('test')
-mongo_set:SECONDARY> mongo_node.mycollection.find()                //ERROR
-mongo_set:SECONDARY> mongo_node1.setSlaveOk()
+mongo_set:SECONDARY> mongo_node2=(new Mongo('localhost:27017')).getDB('test')
+mongo_set:SECONDARY> mongo_node2.mycollection.find()                //ERROR
+mongo_set:SECONDARY> mongo_node2.setSlaveOk()
 mongo_set:SECONDARY> mongo_node2.mycollection.find()
 
             ***After 1 hour!!***
