@@ -10,7 +10,7 @@ docker ps
 docker exec -it mongo_node mongo
 
 > mongo_node=(new Mongo('localhost:27017')).getDB('test')
-> mongo_node.mycollection.find()   //Error
+> mongo_node.mycollection.find()    //Error
 > config={"_id":"mongo_set","members":[{"_id":0,"host":"mongo_node:27017"},{"_id":1,"host":"mongo_node1:27017"},{"_id":2,"host":"mongo_node2:27017","priority" : 0,"slaveDelay" :3600,"hidden" : true}]}
 > rs.initiate(config)
 > exit
