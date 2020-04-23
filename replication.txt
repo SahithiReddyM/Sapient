@@ -1,6 +1,6 @@
- >> COMMANDS FOR MongoDB REPLICATION <<
+                                          >> COMMANDS FOR MongoDB REPLICATION <<
               **TERMINAL-1**
-sudo -i
+sudo -i //On Ubuntu
 docker network create mongo-cluster
 docker network ls                   //To see list of available networks
 docker run -p 30001:27017 --name mongo_node --net mongo-cluster -dt mongo mongod --replSet mongo_set
@@ -10,7 +10,7 @@ docker ps
 docker exec -it mongo_node mongo
 
 > mongo_node=(new Mongo('localhost:27017')).getDB('test')
-> mongo_node.mycollection.find()
+> mongo_node.mycollection.find()   //Error
 > config={"_id":"mongo_set","members":[{"_id":0,"host":"mongo_node:27017"},{"_id":1,"host":"mongo_node1:27017"},{"_id":2,"host":"mongo_node2:27017","priority" : 0,"slaveDelay" :3600,"hidden" : true}]}
 > rs.initiate(config)
 > exit
