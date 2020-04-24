@@ -7,7 +7,7 @@ pipeline {
 		stage("SCM checkout"){
 			steps {
 				git 'https://github.com/SahithiReddyM/Pipeline_trigger.git'
-				}
+			}
 	    } 
         stage ('----clean----') {
             steps {
