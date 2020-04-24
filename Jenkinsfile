@@ -4,7 +4,7 @@ pipeline {
 		cron('H 10 * * *')
 	}
     stages {
-		stage("SCM checkout"){
+		stage("SCM checkout")   {
 			steps {
 				git 'https://github.com/SahithiReddyM/Pipeline_trigger.git'
 			}
@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-        stage ('----test----') {
+        stage ('----test----')  {
             steps {
                 bat "mvn test"
             }
