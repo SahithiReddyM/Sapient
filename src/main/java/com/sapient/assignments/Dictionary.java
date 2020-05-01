@@ -1,8 +1,5 @@
 package com.sapient.assignments;
-import java.util.Collections;
-//import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
@@ -42,7 +39,7 @@ public class Dictionary {
    
     				   System.out.print("Enter Synonyms:");
     				   String synonym=scanner.nextLine().trim();
-    				   Set<String> s=new HashSet();
+    				   Set<String> s=new HashSet<>();
     				   while(synonym.length()!=0)
     				   {
     					   s.add(synonym);
