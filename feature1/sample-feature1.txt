@@ -1,1 +1,0 @@
-In features folder,Sample-feature1.txt
