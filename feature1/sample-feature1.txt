@@ -1,0 +1,1 @@
+Folder with file recreacted with VS code after deleting from command line
